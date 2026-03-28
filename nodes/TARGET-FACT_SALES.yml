@@ -1,0 +1,306 @@
+fileVersion: 1
+id: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+name: FACT_SALES
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3534b651-1e1a-49c7-9bfd-08dfbc1fef3d
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: FACT_SALES_SK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e98d2108-6e12-460f-91b6-bd958af60183
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: STG."ORDER_ID"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa96cccd-ca5d-4416-b3ce-0d674a893c7c
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: CUSTOMER_SK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DC."DIM_CUSTOMER_SR_KEY"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d4b07a0-7bbf-427b-b357-818d415036e7
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: PRODUCT_SK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DP."DIM_PRODUCT_SR_KEY"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 920021c8-7496-4010-b71d-f7091a4dddc2
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: SALESPERSON_SK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DS."DIM_SALES_PERSON_SR_KEY"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 56aa6534-3404-4a42-b8b3-90fdbda983b3
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: DATE_SK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DD."DIM_DATE_YYYYMMDD_SR_KEY"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5dcef4fb-930e-436f-abb6-3ccb87c90654
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: STG."QUANTITY"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e5d9855-eb4d-4d3d-a72b-73cf00358e6d
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: STG."UNIT_PRICE"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8bed42b1-1c68-4c39-830e-b487cb316b1b
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: NUMBER(5,2)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: DISCOUNT_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: STG.DISCOUNT_PCT
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97d5fe5f-8d1d-4e5f-a57d-156015ba4bcf
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: TOTAL_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: STG."TOTAL_AMOUNT"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f88b3f6-8882-45d9-8c9b-bc8e9a4abe2d
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0392483c-4ad0-48fc-9ecd-78087046e4c5
+          stepCounter: cb8013f0-a7b1-471d-b9c9-b3e13a6331be
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DC: 902fa9c2-6e1e-4fc6-82af-b5de06fbacfe
+          DD: b1594f57-d270-4b14-a36b-67f36e1f7a39
+          DP: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          DS: 18aa6cd4-c641-4203-a9b5-11b2030195ea
+          STG: 3f4d57d1-f89b-4876-ada8-1763bceb338c
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG
+            nodeName: STG_RAW_RETAIL_SALES
+          - locationName: TARGET
+            nodeName: DIM_CUSTOMER
+          - locationName: TARGET
+            nodeName: DIM_DATE
+          - locationName: TARGET
+            nodeName: DIM_PRODUCT
+          - locationName: TARGET
+            nodeName: DIM_SALESPERSON
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG', 'STG_RAW_RETAIL_SALES') }} "STG"
+
+            LEFT JOIN {{ ref('TARGET', 'DIM_CUSTOMER') }} "DC"
+            ON "STG"."CUSTOMER_ID" = "DC"."CUSTOMER_ID"
+
+            LEFT JOIN {{ ref('TARGET', 'DIM_PRODUCT') }} "DP"
+            ON "STG"."PRODUCT_ID" = "DP"."PRODUCT_ID"
+
+            LEFT JOIN {{ ref('TARGET', 'DIM_SALESPERSON') }} "DS"
+            ON "STG"."SALESPERSON_ID" = "DS"."SALESPERSON_ID"
+
+            LEFT JOIN {{ ref('TARGET', 'DIM_DATE') }} "DD"
+            ON "STG"."ORDER_DATE" = "DD"."ORDER_DATE"
+        name: FACT_SALES
+        noLinkRefs: []
+  name: FACT_SALES
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node
