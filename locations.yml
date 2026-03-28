@@ -1,0 +1,6 @@
+defaultStorageMapping: null
+fileVersion: 1
+locations:
+  - SRC
+  - STG
+  - TARGET
