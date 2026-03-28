@@ -1,12 +1,11 @@
 fileVersion: 1
-id: 5bbf5c5c-3988-42de-a74c-3de3137b607e
-name: DIM_PRODUCT
+id: 18aa6cd4-c641-4203-a9b5-11b2030195ea
+name: DIM_SALESPERSON
 operation:
   config:
-    insertStrategy: INSERT
     postSQL: ""
     preSQL: ""
-    testsEnabled: false
+    testsEnabled: true
   database: ""
   deployEnabled: true
   description: ""
@@ -21,77 +20,62 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 0aa6da47-388f-4cd9-a0a8-538a4801ff15
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: 01a67e59-075a-4b27-aaa6-ea54a69fbc2f
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: NUMBER
         defaultValue: ""
         description: ""
         isSurrogateKey: true
-        name: DIM_PRODUCT_SR_KEY
+        name: DIM_SALES_PERSON_SR_KEY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 22364929-0d0b-45c9-be16-bc388b7b5051
+              - columnCounter: 063a154e-f932-4d36-b775-60dc737c5bc6
                 stepCounter: 3f4d57d1-f89b-4876-ada8-1763bceb338c
-            transform: MD5(COALESCE(CAST("STG_RAW_RETAIL_SALES"."PRODUCT_ID" AS VARCHAR),''))
+            transform: MD5("STG_RAW_RETAIL_SALES"."SALESPERSON_ID")
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: dd027cab-f17d-4479-9dc0-69e2c720c99f
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: a1f93d22-ba30-4aa6-9cef-470d41e5faba
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
-        name: PRODUCT_ID
+        name: SALESPERSON_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 22364929-0d0b-45c9-be16-bc388b7b5051
+              - columnCounter: 063a154e-f932-4d36-b775-60dc737c5bc6
                 stepCounter: 3f4d57d1-f89b-4876-ada8-1763bceb338c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d18d7885-236c-42ee-89fe-b63387707e7f
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: c2952e4b-00cc-4ae5-a5f8-42561b6a6658
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
         isBusinessKey: true
-        name: PRODUCT_NAME
+        name: SALESPERSON_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 4fd88674-ae3f-49a6-8018-74df9165421a
+              - columnCounter: d1fa9175-a13c-4a98-b7ca-d94b6a883dc8
                 stepCounter: 3f4d57d1-f89b-4876-ada8-1763bceb338c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: aea24bd1-b92f-4257-97d2-a52db74b45fd
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: a0f30bfd-e1cd-45f6-9b0c-c6753d168113
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
         isBusinessKey: true
-        name: CATEGORY
+        name: REGION
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: f955eb20-1a23-4f48-b214-ed5cd8894445
-                stepCounter: 3f4d57d1-f89b-4876-ada8-1763bceb338c
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1e577d75-8c9d-434d-bd67-bea6fee2629e
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
-        config: {}
-        dataType: NUMBER(10,2)
-        description: ""
-        isBusinessKey: true
-        name: UNIT_PRICE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 6fd72379-da0c-49e6-8fe3-4c12070c8c75
+              - columnCounter: 28b02ec2-a8fd-426a-bff7-762746298084
                 stepCounter: 3f4d57d1-f89b-4876-ada8-1763bceb338c
             transform: ""
       - acceptedValues:
@@ -99,8 +83,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: bd12cfcb-fcb7-4330-bd15-9db1e6281e66
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: 434cfeb0-445c-4b87-a96b-1953aeffa127
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: NUMBER
         defaultValue: ""
@@ -116,8 +100,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a364069f-657f-41b4-8137-fc8ff6f90e36
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: 67614fc4-071d-4ee6-9df8-a4624cc071fa
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: VARCHAR
         defaultValue: ""
@@ -133,8 +117,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: de897f10-b284-469a-84b2-cc48c4ffbf64
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: 5fff266c-0223-419f-a0d6-66377db6d8ba
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -150,8 +134,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a537d17a-1f95-4d2e-a386-e1242fe54bdf
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: 3d617e1f-4604-415f-9c89-eb6c93951ae1
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -167,8 +151,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 15d6d5b5-a9fe-4f84-a7bc-96089b9932a3
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: 1bb45e1c-aefb-4ac1-ac22-573edf4bd7fd
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -184,8 +168,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ad9182d4-2318-4917-9fd7-75401fd874cc
-          stepCounter: 5bbf5c5c-3988-42de-a74c-3de3137b607e
+          columnCounter: 4233a7e5-e518-4520-bac6-537ffa82d8e7
+          stepCounter: 18aa6cd4-c641-4203-a9b5-11b2030195ea
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -208,9 +192,9 @@ operation:
             nodeName: STG_RAW_RETAIL_SALES
         join:
           joinCondition: FROM {{ ref('STG', 'STG_RAW_RETAIL_SALES') }} "STG_RAW_RETAIL_SALES"
-        name: DIM_PRODUCT
+        name: DIM_SALESPERSON
         noLinkRefs: []
-  name: DIM_PRODUCT
+  name: DIM_SALESPERSON
   overrideSQL: false
   schema: ""
   sqlType: Dimension

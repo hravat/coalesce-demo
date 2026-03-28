@@ -1,0 +1,346 @@
+fileVersion: 1
+id: b1594f57-d270-4b14-a36b-67f36e1f7a39
+name: DIM_DATE
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b2684742-4807-47ee-8c54-565b8d0f9270
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_DATE_SR_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ceff453f-a6f9-412d-bec1-2fb1f32a97d1
+                stepCounter: 3f4d57d1-f89b-4876-ada8-1763bceb338c
+            transform: CAST(TO_VARCHAR("STG_RAW_RETAIL_SALES"."ORDER_DATE", 'YYYYMMDD') AS INT)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41ff9cf0-8206-47ca-ad2f-9dbc37e5dbe3
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DIM_DATE_YYYYMMDD_SR_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ceff453f-a6f9-412d-bec1-2fb1f32a97d1
+                stepCounter: 3f4d57d1-f89b-4876-ada8-1763bceb338c
+            transform: CAST(TO_VARCHAR("STG_RAW_RETAIL_SALES"."ORDER_DATE"  , 'YYYYMMDD') AS INT)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 504fc4b8-9e86-4ea5-8af7-35207413086b
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"STG_RAW_RETAIL_SALES\".\"ORDER_DATE\""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e6a09f6-4ca0-4ae2-b7f3-20ebce759537
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: YEAR("STG_RAW_RETAIL_SALES"."ORDER_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 500f28f7-af22-428e-9c48-abeaf1ed01dd
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: MONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: MONTH("STG_RAW_RETAIL_SALES"."ORDER_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bee613eb-3c9c-47cc-b422-5e6d623618ad
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: MONTH_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: MONTHNAME("STG_RAW_RETAIL_SALES"."ORDER_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9188bf5-cec0-4fd1-b882-cf79f322bb76
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: QUARTER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: QUARTER("STG_RAW_RETAIL_SALES"."ORDER_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8840d7c2-39a0-4e06-84ba-595f055c01b4
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: DAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DAY("STG_RAW_RETAIL_SALES"."ORDER_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 82f6ac41-eb59-4efc-85eb-73b55432ae93
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: DAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DAYNAME("STG_RAW_RETAIL_SALES"."ORDER_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3df9c669-6574-4f17-a65a-891b1b71f291
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        keyColumnType: None
+        name: IS_WEEKEND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN DAYOFWEEK("STG_RAW_RETAIL_SALES"."ORDER_DATE") IN (1,7) THEN TRUE ELSE FALSE END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1dd8fc93-eb10-4c9c-ab81-b23d97ed105b
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9af64765-30c0-40a6-a06a-f2544af9038f
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16f5d5be-e558-4111-a84e-6e869c15928d
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b2b2cf3b-80c9-4161-a1bd-f1e581e59568
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 516ef821-ae7e-4e08-aa09-f1fd42a278b3
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f3e9727-e4ed-4666-b85c-bf47ed4af424
+          stepCounter: b1594f57-d270-4b14-a36b-67f36e1f7a39
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_RAW_RETAIL_SALES: 3f4d57d1-f89b-4876-ada8-1763bceb338c
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG
+            nodeName: STG_RAW_RETAIL_SALES
+        join:
+          joinCondition: FROM {{ ref('STG', 'STG_RAW_RETAIL_SALES') }} "STG_RAW_RETAIL_SALES"
+        name: DIM_DATE
+        noLinkRefs: []
+  name: DIM_DATE
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

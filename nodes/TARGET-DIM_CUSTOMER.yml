@@ -30,8 +30,10 @@ operation:
         name: DIM_CUSTOMER_SR_KEY
         nullable: false
         sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
+          - columnReferences:
+              - columnCounter: 58f2890c-46c0-4836-a1f9-a1a2ef381c8c
+                stepCounter: 3f4d57d1-f89b-4876-ada8-1763bceb338c
+            transform: MD5("STG_RAW_RETAIL_SALES"."CUSTOMER_ID")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 429fa496-55a5-42aa-a74b-d8c07d56029d
